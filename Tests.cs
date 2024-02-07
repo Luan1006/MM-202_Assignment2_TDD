@@ -7,6 +7,7 @@ public class Tests
         TestUserInputFromConsoleStartsWithNumber(args);
         TestUserInputFromConsoleHasUnit(args);
         TestOneInchInMillimetreVariable();
+        TestConversionFromUserInputToMillimetres(args);
         return allTestsPass;
     }
 
