@@ -1,11 +1,13 @@
 public class Tests
 {
-    public void Run(string[] args)
+    private bool allTestsPass = true;
+    public bool Run(string[] args)
     {
         TestOneInchInMillimetreVariable();
         TestIfUserInputFromConsoleExists(args);
         TestIfUserInputFromConsoleStartsWithNumber(args);
         TestIfUserInputFromConsoleHasUnit(args);
+        return allTestsPass;
     }
 
     void TestOneInchInMillimetreVariable()
@@ -70,6 +72,7 @@ public class Tests
         else
         {
             result = "FAIL";
+            allTestsPass = false;
         }
 
         string testName = message.Replace(" " + result, "");

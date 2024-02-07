@@ -3,6 +3,14 @@
     static void Main(string[] args)
     {
         Tests tests = new Tests();
-        tests.Run(args);
+
+        if (tests.Run(args))
+        {
+            Console.WriteLine("All tests passed");
+        }
+        else
+        {
+            Console.WriteLine("Some tests failed");
+        }
     }
 }
