@@ -3,10 +3,10 @@ public class Tests
     private bool allTestsPass = true;
     public bool Run(string[] args)
     {
-        TestOneInchInMillimetreVariable();
         TestUserInputFromConsoleExists(args);
         TestUserInputFromConsoleStartsWithNumber(args);
         TestUserInputFromConsoleHasUnit(args);
+        TestOneInchInMillimetreVariable();
         return allTestsPass;
     }
 
@@ -20,6 +20,21 @@ public class Tests
         else
         {
             PrintTestResult("TestOneInchInMillimetreVariable", true);
+        }
+    }
+
+    void TestConversionFromUserInputToMillimetres(string[] args)
+    {
+        int inchToConvert = args[0][0];
+        float expectedMillimetres = inchToConvert * Variables.oneInchInMillimetre;
+
+        if (expectedMillimetres != Conversion.ConvertToMillimetres(args))
+        {
+            PrintTestResult("TestConversionFromUserInputToMillimetres", false);
+        }
+        else
+        {
+            PrintTestResult("TestConversionFromUserInputToMillimetres", true);
         }
     }
 
