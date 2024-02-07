@@ -1,9 +1,12 @@
+using System.Xml.Serialization;
+
 public class Tests
 {
     public void Run(string[] args)
     {
-        TestIfUserInputFromConsoleExists(args);
         TestOneInchInMillimetreVariable();
+        TestIfUserInputFromConsoleExists(args);
+        TestIfUserInputFromConsoleStartsWithNumber(args);
     }
 
     void TestOneInchInMillimetreVariable()
@@ -27,6 +30,18 @@ public class Tests
         else
         {
             PrintTestResult("TestUserInputFromConsole", true);
+        }
+    }
+
+    void TestIfUserInputFromConsoleStartsWithNumber(string[] args)
+    {
+        if (char.IsDigit(args[0][0]))
+        {
+            PrintTestResult("TestUserInputFromConsoleStartsWithNumber", true);
+        }
+        else
+        {
+            PrintTestResult("TestUserInputFromConsoleStartsWithNumber", false);
         }
     }
 
