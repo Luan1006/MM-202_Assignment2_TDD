@@ -1,4 +1,4 @@
 public class Variables
 {
-    float oneInchInMillimetre = 25.4f;
+    public const float oneInchInMillimetre = 25.4f;
 }
