@@ -7,6 +7,7 @@ public class Tests
         TestOneInchInMillimetreVariable();
         TestIfUserInputFromConsoleExists(args);
         TestIfUserInputFromConsoleStartsWithNumber(args);
+        TestIfUserInputFromConsoleHasUnit(args);
     }
 
     void TestOneInchInMillimetreVariable()
@@ -43,6 +44,22 @@ public class Tests
         {
             PrintTestResult("TestUserInputFromConsoleStartsWithNumber", false);
         }
+    }
+
+    void TestIfUserInputFromConsoleHasUnit(string[] args)
+    {
+        bool hasUnit = false;
+
+        foreach (var arg in args)
+        {
+            if (arg.StartsWith("-") && (arg.Contains("mm") || arg.Contains("cm") || arg.Contains("m")))
+            {
+                hasUnit = true;
+                break;
+            }
+        }
+
+        PrintTestResult("TestUserInputFromConsoleHasUnit", hasUnit);
     }
 
     void PrintTestResult(string message, bool isPass)
