@@ -19,7 +19,7 @@
             if (arg.StartsWith(Variables.PREFIX) && (arg.Contains(Variables.MILLIMETRES) || arg.Contains(Variables.CENTIMETRES) || arg.Contains(Variables.METERS)))
             {
                 unit = arg;
-                break;
+                break; // use the first unit found
             }
         }
 
