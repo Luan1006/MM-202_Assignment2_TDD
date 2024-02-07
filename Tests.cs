@@ -4,9 +4,9 @@ public class Tests
     public bool Run(string[] args)
     {
         TestOneInchInMillimetreVariable();
-        TestIfUserInputFromConsoleExists(args);
-        TestIfUserInputFromConsoleStartsWithNumber(args);
-        TestIfUserInputFromConsoleHasUnit(args);
+        TestUserInputFromConsoleExists(args);
+        TestUserInputFromConsoleStartsWithNumber(args);
+        TestUserInputFromConsoleHasUnit(args);
         return allTestsPass;
     }
 
@@ -22,7 +22,7 @@ public class Tests
         }
     }
 
-    void TestIfUserInputFromConsoleExists(string[] args)
+    void TestUserInputFromConsoleExists(string[] args)
     {
         if (args.Length == 0)
         {
@@ -34,7 +34,7 @@ public class Tests
         }
     }
 
-    void TestIfUserInputFromConsoleStartsWithNumber(string[] args)
+    void TestUserInputFromConsoleStartsWithNumber(string[] args)
     {
         if (char.IsDigit(args[0][0]))
         {
@@ -46,7 +46,7 @@ public class Tests
         }
     }
 
-    void TestIfUserInputFromConsoleHasUnit(string[] args)
+    void TestUserInputFromConsoleHasUnit(string[] args)
     {
         bool hasUnit = false;
 
