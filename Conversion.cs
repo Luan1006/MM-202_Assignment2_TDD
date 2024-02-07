@@ -6,6 +6,12 @@ public class Conversion
         return inchToConvert * Variables.oneInchInMillimetre;
     }
 
+    public static float ConvertToCentimetres(string[] args)
+    {
+        int inchToConvert = args[0][0];
+        return inchToConvert * Variables.oneInchInMillimetre / 10;
+    }
+
     public static float ConvertToMeters(string[] args)
     {
         int inchToConvert = args[0][0];
