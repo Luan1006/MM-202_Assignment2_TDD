@@ -1,5 +1,3 @@
-using System.Xml.Serialization;
-
 public class Tests
 {
     public void Run(string[] args)
