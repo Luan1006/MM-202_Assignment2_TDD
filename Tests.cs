@@ -2,7 +2,7 @@ public class Tests
 {
     public void Run(string[] args)
     {
-        TestUserInputFromConsole(args);
+        TestIfUserInputFromConsoleExists(args);
         TestOneInchInMillimetreVariable();
     }
 
@@ -18,7 +18,7 @@ public class Tests
         }
     }
 
-    void TestUserInputFromConsole(string[] args)
+    void TestIfUserInputFromConsoleExists(string[] args)
     {
         if (args.Length == 0)
         {
