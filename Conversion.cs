@@ -5,4 +5,10 @@ public class Conversion
         int inchToConvert = args[0][0];
         return inchToConvert * Variables.oneInchInMillimetre;
     }
+
+    public static float ConvertToMeters(string[] args)
+    {
+        int inchToConvert = args[0][0];
+        return inchToConvert * Variables.oneInchInMillimetre / 1000;
+    }
 }
