@@ -10,6 +10,7 @@ public class Tests
         return allTestsPass;
     }
 
+    #region Unit Tests
     void TestOneInchInMillimetreVariable()
     {
         if (Variables.oneInchInMillimetre != 25.4f)
@@ -22,6 +23,9 @@ public class Tests
         }
     }
 
+    #endregion
+
+    #region User Input Tests
     void TestUserInputFromConsoleExists(string[] args)
     {
         if (args.Length == 0)
@@ -61,7 +65,9 @@ public class Tests
 
         PrintTestResult("TestUserInputFromConsoleHasUnit", hasUnit);
     }
+    #endregion
 
+    #region Test Helpers
     void PrintTestResult(string message, bool isPass)
     {
         string result;
@@ -93,4 +99,5 @@ public class Tests
         Console.ResetColor();
         Console.WriteLine(" " + testName);
     }
+    #endregion
 }
