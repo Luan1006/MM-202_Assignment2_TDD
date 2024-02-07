@@ -8,6 +8,7 @@ public class Tests
         TestUserInputFromConsoleHasUnit(args);
         TestOneInchInMillimetreVariable();
         TestConversionFromUserInputToMillimetres(args);
+        TestConversionFromUserInputToCentimetres(args);
         TestConversionFromUserInputToMeter(args);
         return allTestsPass;
     }
