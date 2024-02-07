@@ -39,6 +39,21 @@ public class Tests
         }
     }
 
+    void TestConverstionFromUserInputToMeter(string[] args)
+    {
+        int inchToConvert = args[0][0];
+        float expectedMeters = inchToConvert * Variables.oneInchInMillimetre / 1000;
+
+        if (expectedMeters != Conversion.ConvertToMeters(args))
+        {
+            PrintTestResult("TestConverstionFromUserInputToMeter", false);
+        }
+        else
+        {
+            PrintTestResult("TestConverstionFromUserInputToMeter", true);
+        }
+    }
+
     #endregion
 
     #region User Input Tests

@@ -7,6 +7,7 @@
         if (!tests.Run(args))
         {
             Console.WriteLine("Some tests failed");
+            return;
         }
 
         Console.WriteLine("All tests passed");
