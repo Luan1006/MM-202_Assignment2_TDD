@@ -8,7 +8,7 @@ public class Tests
         TestUserInputFromConsoleHasUnit(args);
         TestOneInchInMillimetreVariable();
         TestConversionFromUserInputToMillimetres(args);
-        TestConverstionFromUserInputToMeter(args);
+        TestConversionFromUserInputToMeter(args);
         return allTestsPass;
     }
 
@@ -40,7 +40,22 @@ public class Tests
         }
     }
 
-    void TestConverstionFromUserInputToMeter(string[] args)
+    void TestConversionFromUserInputToCentimetres(string[] args)
+    {
+        int inchToConvert = args[0][0];
+        float expectedCentimetres = inchToConvert * Variables.oneInchInMillimetre / 10;
+
+        if (expectedCentimetres != Conversion.ConvertToCentimetres(args))
+        {
+            PrintTestResult("TestConversionFromUserInputToCentimetres", false);
+        }
+        else
+        {
+            PrintTestResult("TestConversionFromUserInputToCentimetres", true);
+        }
+    }
+
+    void TestConversionFromUserInputToMeter(string[] args)
     {
         int inchToConvert = args[0][0];
         float expectedMeters = inchToConvert * Variables.oneInchInMillimetre / 1000;
