@@ -2,15 +2,23 @@
 {
     static void Main(string[] args)
     {
-        Tests tests = new Tests();
+        Console.Clear();
 
-        if (!tests.Run(args))
+        foreach (var arg in args)
         {
-            Console.WriteLine(Variables.TEST_FAILED);
-            return;
-        }
+            if (arg.StartsWith(Variables.PREFIX) && arg.Contains(Variables.TEST))
+            {
+                Tests tests = new Tests();
 
-        Console.WriteLine(Variables.ALL_TESTS_PASSED);
+                if (!tests.Run(args))
+                {
+                    Console.WriteLine(Variables.TEST_FAILED);
+                    return;
+                }
+
+                Console.WriteLine(Variables.ALL_TESTS_PASSED);
+            }
+        }
 
         string unit = "";
 
