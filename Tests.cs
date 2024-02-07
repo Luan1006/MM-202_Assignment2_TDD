@@ -1,7 +1,8 @@
 public class Tests
 {
-    public void Run()
+    public void Run(string[] args)
     {
+        TestUserInputFromConsole(args);
         TestOneInchInMillimetreVariable();
     }
 
@@ -14,6 +15,18 @@ public class Tests
         else
         {
             PrintTestResult("TestOneInchInMillimetreVariable", true);
+        }
+    }
+
+    void TestUserInputFromConsole(string[] args)
+    {
+        if (args.Length == 0)
+        {
+            PrintTestResult("TestUserInputFromConsole", false);
+        }
+        else
+        {
+            PrintTestResult("TestUserInputFromConsole", true);
         }
     }
 
