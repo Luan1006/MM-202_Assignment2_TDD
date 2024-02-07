@@ -5,4 +5,6 @@ public class Variables
     public const string MILLIMETRES = "mm";
     public const string CENTIMETRES = "cm";
     public const string METERS = "m";
+    public const string ALL_TESTS_PASSED = "All tests passed";
+    public const string TEST_FAILED = "Test failed";
 }

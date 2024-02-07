@@ -6,11 +6,11 @@
 
         if (!tests.Run(args))
         {
-            Console.WriteLine("Some tests failed");
+            Console.WriteLine(Variables.TEST_FAILED);
             return;
         }
 
-        Console.WriteLine("All tests passed");
+        Console.WriteLine(Variables.ALL_TESTS_PASSED);
 
         string unit = "";
 
@@ -23,17 +23,17 @@
             }
         }
 
-        if (Equals(unit, Variables.PREFIX + Variables.MILLIMETRES))
+        if (Equals(unit, $"{Variables.PREFIX}{Variables.MILLIMETRES}"))
         {
-            Console.WriteLine(Conversion.ConvertToMillimetres(args));
+            Console.WriteLine($"{Conversion.ConvertToMillimetres(args)} {Variables.MILLIMETRES}");
         }
-        else if (Equals(unit, Variables.PREFIX + Variables.CENTIMETRES))
+        else if (Equals(unit, $"{Variables.PREFIX}{Variables.CENTIMETRES}"))
         {
-            Console.WriteLine(Conversion.ConvertToCentimetres(args));
+            Console.WriteLine($"{Conversion.ConvertToCentimetres(args)} {Variables.CENTIMETRES}");
         }
-        else if (Equals(unit, Variables.PREFIX + Variables.METERS))
+        else if (Equals(unit, $"{Variables.PREFIX}{Variables.METERS}"))
         {
-            Console.WriteLine(Conversion.ConvertToMeters(args));
+            Console.WriteLine($"{Conversion.ConvertToMeters(args)} {Variables.METERS}");
         }
     }
 }
