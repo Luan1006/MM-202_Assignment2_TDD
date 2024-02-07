@@ -9,11 +9,11 @@ public class Tests
     {
         if (Variables.oneInchInMillimetre != 25.4f)
         {
-            PrintTestResult("TestOneInchInMillimetreVariable FAIL", false);
+            PrintTestResult("TestOneInchInMillimetreVariable", false);
         }
         else
         {
-            PrintTestResult("TestOneInchInMillimetreVariable PASS", true);
+            PrintTestResult("TestOneInchInMillimetreVariable", true);
         }
     }
 
@@ -43,9 +43,8 @@ public class Tests
 
         Console.BackgroundColor = backgroundColor;
         Console.ForegroundColor = ConsoleColor.Black;
-        Console.Write(result + " ");
+        Console.Write(result);
         Console.ResetColor();
-        Console.Write(testName);
-        Console.WriteLine();
+        Console.WriteLine(" " + testName);
     }
 }
