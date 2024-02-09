@@ -1,20 +1,17 @@
 public class Conversion
 {
-    public static float ConvertToMillimetres(string[] args)
+    public static float ConvertToMillimetres(float inchToConvert)
     {
-        int inchToConvert = args[0][0];
         return inchToConvert * Variables.oneInchInMillimetre;
     }
 
-    public static float ConvertToCentimetres(string[] args)
+    public static float ConvertToCentimetres(float inchToConvert)
     {
-        int inchToConvert = args[0][0];
         return inchToConvert * Variables.oneInchInMillimetre / 10;
     }
 
-    public static float ConvertToMeters(string[] args)
+    public static float ConvertToMeters(float inchToConvert)
     {
-        int inchToConvert = args[0][0];
         return inchToConvert * Variables.oneInchInMillimetre / 1000;
     }
 }

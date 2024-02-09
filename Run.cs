@@ -31,17 +31,19 @@
             }
         }
 
+        float inchToConvert = float.Parse(args[0][0].ToString());
+
         if (Equals(unit, $"{Variables.PREFIX}{Variables.MILLIMETRES}"))
         {
-            Console.WriteLine($"{Conversion.ConvertToMillimetres(args)} {Variables.MILLIMETRES}");
+            Console.WriteLine($"{Conversion.ConvertToMillimetres(inchToConvert)} {Variables.MILLIMETRES}");
         }
         else if (Equals(unit, $"{Variables.PREFIX}{Variables.CENTIMETRES}"))
         {
-            Console.WriteLine($"{Conversion.ConvertToCentimetres(args)} {Variables.CENTIMETRES}");
+            Console.WriteLine($"{Conversion.ConvertToCentimetres(inchToConvert)} {Variables.CENTIMETRES}");
         }
         else if (Equals(unit, $"{Variables.PREFIX}{Variables.METERS}"))
         {
-            Console.WriteLine($"{Conversion.ConvertToMeters(args)} {Variables.METERS}");
+            Console.WriteLine($"{Conversion.ConvertToMeters(inchToConvert)} {Variables.METERS}");
         }
     }
 }

@@ -28,10 +28,10 @@ public class Tests
 
     void TestConversionFromUserInputToMillimetres(string[] args)
     {
-        int inchToConvert = args[0][0];
+        float inchToConvert = float.Parse(args[0][0].ToString());
         float expectedMillimetres = inchToConvert * Variables.oneInchInMillimetre;
 
-        if (expectedMillimetres != Conversion.ConvertToMillimetres(args))
+        if (expectedMillimetres != Conversion.ConvertToMillimetres(inchToConvert))
         {
             PrintTestResult("TestConversionFromUserInputToMillimetres", false);
         }
@@ -43,10 +43,10 @@ public class Tests
 
     void TestConversionFromUserInputToCentimetres(string[] args)
     {
-        int inchToConvert = args[0][0];
+        float inchToConvert = float.Parse(args[0][0].ToString());
         float expectedCentimetres = inchToConvert * Variables.oneInchInMillimetre / 10;
 
-        if (expectedCentimetres != Conversion.ConvertToCentimetres(args))
+        if (expectedCentimetres != Conversion.ConvertToCentimetres(inchToConvert))
         {
             PrintTestResult("TestConversionFromUserInputToCentimetres", false);
         }
@@ -58,10 +58,10 @@ public class Tests
 
     void TestConversionFromUserInputToMeter(string[] args)
     {
-        int inchToConvert = args[0][0];
+        float inchToConvert = float.Parse(args[0][0].ToString());
         float expectedMeters = inchToConvert * Variables.oneInchInMillimetre / 1000;
 
-        if (expectedMeters != Conversion.ConvertToMeters(args))
+        if (expectedMeters != Conversion.ConvertToMeters(inchToConvert))
         {
             PrintTestResult("TestConverstionFromUserInputToMeter", false);
         }
